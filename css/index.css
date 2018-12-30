@@ -1,0 +1,182 @@
+/*
+*.ghost是纯高度class，用于调试位置
+*
+*/
+body{
+	margin:0;
+	padding:0;
+	height: 100vh;
+}
+/*默认center*/
+.flex{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.ghost{
+	width: 100%;
+	height: 50px;
+}
+input{
+	outline: none;
+	border-radius: 3px;
+	padding-left: 10px;
+}
+/*通用样式*/
+
+/*效果区*/
+.container{
+	background: #f5f5f5;
+}
+.view{
+	border-left: 2px #bcbcbc solid;
+	width: 50%;
+	min-height: 100%;
+	flex-direction: column;
+}
+/*iphone6数据*/
+.view-container{
+	width: 375px;
+	height:667px;
+	box-shadow: 0px 0px 5px 0px #ccc;
+	border-radius: 5px;
+	background: #ffffff;
+}
+.view-head{
+	height: 70px;
+	background: #ff9ca2;
+	transition: all 0.25s;
+}
+.view-body{
+	height:calc(100% - 70px);
+}
+.view-infor{
+	padding:10px 0;
+}
+.view-name{
+}
+.view-body-image{
+	height:80%;
+}
+.view-body-image>img{
+	width: 100%;
+	max-height: 100%;
+}
+.view-body-button{
+	height:20%;
+}
+.view-body-button>button{
+	width: 50%;
+	height:40px;
+	background: #ff9ca2;
+	border:none;
+	border-radius: 40px;
+	outline: none;
+	font-size:18px;
+	color:#ffffff;
+	cursor: pointer;
+	transition: all 0.25s;
+}
+/*调试区*/
+.debugger{
+	width: 50%;
+	height: 100%;
+}
+.debugger-container-title{
+	font-size: 20px;
+	font-weight: bold;
+}
+.debugger-container{
+	width:400px; 
+	padding:30px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px 0px #ccc;
+	background: #ffffff;
+	position: relative;
+}
+.debugger-container>div{
+	margin:15px 0;
+}
+.debugger-container>div:first-child{
+	margin-top:0;
+	margin-bottom: 20px;
+}
+.debugger-container>div:last-child{
+	margin-bottom:0;
+}
+.debugger-container>div>div{
+	margin-bottom: 10px;
+}
+.number{
+	margin-right: 10px;
+}
+.run{
+	width: 55px;
+    height: 32px;
+    background: #409eff;
+    text-align: center;
+    line-height: 32px;
+    position: absolute;
+    top: 12px;
+    right: 25px;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.debugger-container input{
+	height: 25px;
+	transition: all 0.2s;
+	border: none;
+	position: relative;
+    bottom: 1px;
+    font-size: 15px;
+    padding-left: 5px;
+    width: 100px;
+}
+/*.debugger-container input:focus{
+	border:1px #409eff solid;
+}*/
+.input-container{
+	width: 160px;
+	height: 30px;
+	border:1px #ccc solid;
+	border-radius: 3px;
+}
+.input-value{
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	text-align: center;
+	line-height: 30px;
+	border-right: 1px #ccc solid;
+	font-size: 16px;
+}
+
+/*画板区*/
+.selectColor{
+	display: none;
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+}
+.pickColor{
+	width: 55px;
+    height: 32px;
+    background: #555;
+    text-align: center;
+    line-height: 32px;
+    position: absolute;
+    top: 12px;
+    right: 90px;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+#color{
+	border:none;
+	border-radius: 3px;
+	height: 30px;
+}

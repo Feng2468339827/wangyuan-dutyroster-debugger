@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-cmn">
+<head>
+	<meta charset="UTF-8">
+	<title>首页调试demo</title>
+	<link rel="stylesheet" href="./css/index.css">
+	<link rel="stylesheet" href="./css/farbtastic.css">
+</head>
+<body>
+	<div class="container flex">
+		<!-- 调试区 -->
+		<div class="debugger flex">
+			<div class="debugger-container">
+				<div class='debugger-container-title'>调试区</div>
+				<div class="">
+					<div class=''>
+						<span class='number'>1.</span>图片切换
+					</div>
+					<button onclick='createFileInput()'>图片选择</button>
+				</div>
+				<div class="">
+					<div>
+						<span class='number'>2.</span>导航栏背景颜色改变（16进制例如：#ffffff）
+					</div>
+					<div class="input-container">
+						<span class="input-value">#</span>
+						<input type="text" class='input-headBackColor' maxlength='6' value=''>
+					</div>
+				</div>
+				<div class="">
+					<div>
+						<span class='number'>3.</span>导航栏字体颜色改变
+					</div>
+					<div class="input-container">
+						<span class="input-value">#</span>
+						<input type="text" class='input-headColor' maxlength='6' value=''>
+					</div>
+				</div>
+				<div class="">
+					<div>
+						<span class='number'>4.</span>按钮背景颜色改变
+					</div>
+					<div class="input-container">
+						<span class="input-value">#</span>
+						<input type="text" class='input-buttonBackColor' maxlength='6' value=''>
+					</div>
+				</div>
+				<div class="">
+					<div>
+						<span class='number'>5.</span>按钮字体颜色改变
+					</div>
+					<div class="input-container">
+						<span class="input-value">#</span>
+						<input type="text" class='input-buttonColor' maxlength='6' value=''>
+					</div>
+				</div>
+				<div class="run" onclick='run()'>预览</div>
+				<div class="pickColor" onclick='pickColor()'>调色板</div>
+				<span>改变视图大小</span>
+				<select name="" id="selecttype">
+					<option value="iphone6">iphone6</option>
+					<option value="iphone5">iphone5</option>
+					<option value="iphoneX">iphoneX</option>
+				</select>
+
+			</div>
+
+		</div>
+		
+		<!-- 画板区 -->
+		<div class="selectColor">
+			<form><input type="text" id="color" name="color" value="#123456" /></form>
+			<div id="colorpicker"></div>
+		</div>
+
+		<!-- 效果区 -->
+		<div class="view flex">
+			<!-- 纯高度节点 -->
+			<div class="ghost"></div>
+			<div class="view-container">
+				<div class="view-head">
+					<div class="view-infor flex">
+						12:00
+					</div>
+					<div class="view-name flex">
+						网园资讯工作室
+					</div>
+				</div>
+				<div class="view-body">
+					<div class="view-body-image flex">
+						<img src="./images/red_icon4.5bd7439.png" alt="">
+					</div>
+					<div class="view-body-button flex">
+						<button>GO!</button>
+					</div>
+				</div>
+			</div>
+			<div class="ghost"></div>
+		</div>
+	</div>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<script src='./js/farbtastic.js'></script>
+	<script src='./js/index.js'></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#colorpicker').farbtastic('#color');
+		});
+    </script>
+</body>
+</html>
